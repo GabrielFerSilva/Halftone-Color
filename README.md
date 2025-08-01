@@ -12,10 +12,9 @@ An implementation of color halftoning using space-filling curves, extending the 
 - [About](#about)
 - [Algorithm](#algorithm)
 - [Effects](#algorithm)
+- [Examples](#examples)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Examples](#examples)
-- [Contributors](#contributors)
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
 
@@ -31,18 +30,29 @@ The monochrome version was reimplemented during the 2025 summer course [Reproduc
 
 ## Algorithm
 
+The halftone works with 3 core components: Hilbert Curve Generation, Curve Generation and the Halftoning Engine
+
+### 1. Space Filling Curve Generation (`hilbert()/peano()/lebesgue()`)
+
+Maps a 1D index to 2D coordinates on a specified space filling curve
+
+### 2. Curve Generation (generate_space_filling_curve()`)
+
+Calculates minimum curve order to cover image dimensions, and then generates complete curve coordinates
 The space-filling curve approach provides:
 - Superior dot distribution compared to regular grids
 - Better detail preservation
 - Smother tonal transitions
 
-Our color implementation:
-1. Decomposes RGB image into channels
-2. Applies space-filling curve halftoning to each channel
-3. Recombines channels with color correction
-4. Optional post-processing for enhanced results
+### 3. Halftoning Engine (`halftoning()`)
 
-## Installation
+The color halftone implementation:
+1. Decomposes the RGB image into three separated channels, one for each color.
+2. Applies the space-filling curve halftoning to each channel
+3. Then, recombines channels with color correction
+4. Uses optional pre-processing for enhanced results
+
+### Installation
 
 ### Requirements
 - Python 3.8+
