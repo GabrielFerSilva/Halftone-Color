@@ -8,7 +8,7 @@
 
 An implementation of color halftoning using space-filling curves, extending the original monochrome algorithm from the SIGGRAPH '91 paper.
 
-## Table of Contents
+## Table of Contents:
 - [About](#about)
 - [Algorithm](#algorithm)
 - [Effects](#algorithm)
@@ -17,7 +17,7 @@ An implementation of color halftoning using space-filling curves, extending the 
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
 
-## About
+## About:
 
 This project implements a color version of the halftoning algorithm described in:
 
@@ -27,12 +27,12 @@ SIGGRAPH '91 ([DOI: 10.1145/122718.122727](https://doi.org/10.1145/122718.122727
 
 The monochrome version was reimplemented during the 2025 summer course [Reproducing Results in Computer Graphics](https://lhf.impa.br/cursos/rr/)by me, Bianca Zavadisk de Abreu, Gustavo Souza Cardoso, Igor Augusto Zwirtes, Igor Roberto Alves, João Marcelo, Lucas Barros Barcelos, Pedro Henrique Porto and Yan Hill at the Instituto de Mathematica Pura e Aplicada (IMPA). This extension was made by me and adds a RGB image support to the original monochrome implementation. The monochrome version was reimplemented. We used Python because it had compatibility with OpenCV and because it was the most known programming language by the group.
 
-### Requirements
+### Requirements:
 - Python 3.8+
 - OpenCV
 - NumPy
 
-## Algorithm
+## Algorithm:
 
 The halftone works with 3 core components: Hilbert Curve Generation, Curve Generation and the Halftoning Engine
 
@@ -60,7 +60,7 @@ The color halftone implementation:
 
 In this step, we have a threshold value and an intensity accumulator, when tranversing the pixels on each cluster size, we decide which pixels are going to be black and white following the SFC order and intensity accumulator. At the end of each cluster, the remaining error is sent to the next cluster in compensation.
 
-## Effects
+## Effects:
 
 #### Brightness/Contrast Adjustment (`brightnesscontrast()`)
 
@@ -74,12 +74,17 @@ Where $\alpha > 0$, $\beta$ is the gain (contrast) and bias (brightness) paramet
 
 Image gets converted to HSV color space to adjust the saturation.
 
+## Examples:
+
+
+
 ## Installation
 
 #### Clone the repository
 
-``` git clone https://github.com/yourusername/halftone-color.git
-cd halftone-color ```
+```bash
+git clone https://github.com/yourusername/halftone-color.git
+cd halftone-color
 
 
 ### Setup
