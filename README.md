@@ -76,7 +76,15 @@ Image gets converted to HSV color space to adjust the saturation.
 
 ## Examples:
 
+### 1. 
 
+<img src="Images/barquinho" alt="Sailboat on lake , found in USC-SIPI database" width="800">
+
+<img src="Images/hilber/collage_hilbert_2" alt="Sailboat on lake , found in USC-SIPI database" width="800">
+
+<img src="Images/hilber/collage_hilbert_6" width="1600">
+
+<img src="Images/hilber/collage_hilbert_10" width="1600">
 
 ## Installation
 
@@ -87,15 +95,12 @@ git clone https://github.com/yourusername/halftone-color.git
 scd halftone-color
 ```
 
-### Setup
-bash
-git clone https://github.com/yourusername/halftone-color.git
-cd halftone-color
-pip install -r requirements.txt
-
 ## References
 
 This implementation follows OpenCV's basic linear transformation approach. For official documentation:
 
 [OpenCV Basic Linear Transform Tutorial](https://docs.opencv.org/4.x/d3/dc1/tutorial_basic_linear_transform.html)  
 *OpenCV 4.13.0 Documentation*
+
+This project uses sample images from the [USC-SIPI Image Database](https://sipi.usc.edu/database/database.php?volume=misc)  
+*University of Southern California, Signal and Image Processing Institute*
