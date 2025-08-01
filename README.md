@@ -86,7 +86,7 @@ Image gets converted to HSV color space to adjust the saturation.
 
 <img src="Images/hilbert/collage_hilbert_10.png" width="1600">
 
-### 2. 
+### 2. Brightness
 
 <img src="Images/couple.tiff" alt="Photo of a Couple , found in USC-SIPI database" width="400">
 
@@ -94,9 +94,25 @@ Image gets converted to HSV color space to adjust the saturation.
 
 <img src="Images/brig70.png" width="1600">
 
-### 3.
+### 3. Contrast
 
 <img src="Images/masqueico.tiff" alt="Photo of a Baboon , found in USC-SIPI database" width="400">
+
+<img src="Images/cont1.png" width="1600">
+
+<img src="Images/cont2.png" width="1600">
+
+<img src="Images/cont3.png" width="1600">
+
+### 4. Saturation
+
+<img src="Images/house.tiff" alt="Photo of a house , found in USC-SIPI database" width="400">
+
+<img src="Images/sat1.png" width="1600">
+
+<img src="Images/sat2.png" width="1600">
+
+<img src="Images/sat3.png" width="1600">
 
 ## Installation
 
