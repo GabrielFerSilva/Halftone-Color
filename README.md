@@ -21,9 +21,9 @@ An implementation of color halftoning using space-filling curves, extending the 
 ## About
 
 This project implements a color version of the halftoning algorithm described in:
-<center>**"Digital halftoning with space filling curves"**  
+**"Digital halftoning with space filling curves"**  
 *Luiz Velho and Jonas de Miranda Gomes*  
-SIGGRAPH '91 ([DOI: 10.1145/122718.122727](https://doi.org/10.1145/122718.122727))</center>
+SIGGRAPH '91 ([DOI: 10.1145/122718.122727](https://doi.org/10.1145/122718.122727))
 
 The monochrome version was reimplemented during the 2025 summer course [Reproducing Results in Computer Graphics](https://lhf.impa.br/cursos/rr/)by me, Bianca Zavadisk de Abreu, Gustavo Souza Cardoso, Igor Augusto Zwirtes, Igor Roberto Alves, João Marcelo, Lucas Barros Barcelos, Pedro Henrique Porto and Yan Hill at the Instituto de Mathematica Pura e Aplicada (IMPA). This extension adds RGB image support to the original monochrome implementation. The monochrome version was reimplemented. We used Python because it had compatibility with OpenCV and because it was the most known programming language by the group.
 
