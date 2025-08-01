@@ -37,10 +37,51 @@ The monochrome version was reimplemented during the 2025 summer course [Reproduc
 The halftone works with 3 core components: Hilbert Curve Generation, Curve Generation and the Halftoning Engine
 
 #### 1. Space Filling Curve Generation (`hilbert()/peano()/lebesgue()`)
+```bash
+    """
+    Compute the (x, y) coordinates of the i-th point on the specific curve of a given order.
 
+
+    Parameters:
+    -----------
+    i : int
+        The index of the point on the space filling curve curve.
+    order : int
+        The order of the space filling curve curve. The curve will cover a 2^order (or 3^order depending on the curve) grid.
+
+    Returns:
+    --------
+    (x, y) : tuple of int
+        The (x, y) coordinates of the i-th point on the space filling curve curve.
+    """
+```
 Maps a 1D index to 2D coordinates on the specified space filling curve(SFC), this is used to transverse the pixels of the image and to conceive the halftoning.
 
 #### 2. Curve Generation (`generate_space_filling_curve()`)
+```bash
+    """
+    Generates the space filling curve of the selected curve and order.
+    Possible curves : hilbert, peano, lebesgue
+
+    Parameters:
+    -----------
+    image : numpy.ndarray
+        The input image.
+    curve : str
+        The curve to use for the space filling curve.
+        Options: 'hilbert', 'peano', 'lebesgue'
+    cluster_size : int
+        The size of the clusters to use for the space filling curve.
+    show_curve : boolean
+        To determine whether you want to show the curve or not.
+        Default: False
+
+    Returns:
+    --------
+    (x, y) : tuple of int
+        The (x, y) coordinates of the i-th point on the Hilbert curve.
+    """
+```
 
 Calculates minimum curve order to cover image dimensions, and then generates complete curve coordinates
 The space-filling curve approach provides:
@@ -49,7 +90,31 @@ The space-filling curve approach provides:
 - Smother tonal transitions
 
 #### 3. Halftoning Engine (`halftoning()`)
-
+```bash
+    """
+    Parameters:
+    -----------
+    image : numpy.ndarray
+        The input image.
+    curve : str
+        The curve to use for the space filling curve.
+        Options: 'hilbert', 'peano', 'lebesgue'
+    cluster_size : int
+        The size of the clusters to use for the space filling curve.
+    separate : boolean
+        To determine whether you want to return each halftone separated or the whole halftone.
+        Default: False
+    monocrome : boolean
+        To determine whether you want the monochrome halftoned image or not.
+        Default: False
+    distribution : str
+        Type of distribution for the clusters.
+        Default: 'standard'
+        Options: 'standard', 'ordered', 'random'
+    Returns:
+        numpy.ndarray or list of numpy.ndarrays
+    """
+```
 Each color is treated as a B&W halftone in this step, just to be reunited again at the end. 
 
 The color halftone implementation:
@@ -63,7 +128,22 @@ In this step, we have a threshold value and an intensity accumulator, when tranv
 ## Effects:
 
 #### Brightness/Contrast Adjustment (`brightnesscontrast()`)
-
+```bash
+    """
+    Parameters:
+    -----------
+    image : numpy.ndarray
+        The input image.
+    alpha : float
+        The gain (contrast) factor.
+        Default: 1
+    beta : float
+        The bias (brightness) factor.
+        Default: 0
+    Returns:
+        numpy.ndarray 
+    """
+```
 Adjusts image brightness using a linear transformation formula:
 
 $g(x) = \alpha \dot f(x) + \beta$
@@ -71,7 +151,22 @@ $g(x) = \alpha \dot f(x) + \beta$
 Where $\alpha > 0$, $\beta$ is the gain (contrast) and bias (brightness) parameters.
 
 #### Saturation Adjustment (`saturation()`)
-
+```bash
+    """
+    Parameters:
+    -----------
+    image : numpy.ndarray
+        The input image.
+    alpha : float
+        The gain (contrast) factor.
+        Default: 1
+    beta : float
+        The bias (brightness) factor.
+        Default: 0
+    Returns:
+        numpy.ndarray 
+    """
+```
 Image gets converted to HSV color space to adjust the saturation.
 
 ## Examples:
