@@ -38,7 +38,7 @@ The halftone works with 3 core components: Hilbert Curve Generation, Curve Gener
 
 #### 1. Space Filling Curve Generation (`hilbert()/peano()/lebesgue()`)
 
-Maps a 1D index to 2D coordinates on the specified space filling curve
+Maps a 1D index to 2D coordinates on the specified space filling curve(SFC), this is used to transverse the pixels of the image and to conceive the halftoning.
 
 #### 2. Curve Generation (generate_space_filling_curve()`)
 
@@ -50,15 +50,19 @@ The space-filling curve approach provides:
 
 #### 3. Halftoning Engine (`halftoning()`)
 
+Each color is treated as a B&W halftone in this step, just to be reunited again at the end. 
+
 The color halftone implementation:
 1. Decomposes the RGB image into three separated channels, one for each color.
 2. Applies the space-filling curve halftoning to each channel
 3. Then, recombines channels with color correction
 4. Uses optional pre-processing for enhanced results
 
+In this step, we have a threshold value and an intensity accumulator, when tranversing the pixels on each cluster size, we decide which pixels are going to be black and white following the SFC order and intensity accumulator. At the end of each cluster, the remaining error is sent to the next cluster in compensation.
+
 ## Effects
 
-### Brightness/Contrast Adjustment (`brightnesscontrast()`)
+#### Brightness/Contrast Adjustment (`brightnesscontrast()`)
 
 Adjusts image brightness using a linear transformation formula:
 
@@ -66,13 +70,14 @@ $g(x) = \alpha \dot f(x) + \beta$
 
 Where $\alpha > 0$, $\beta$ is the gain (contrast) and bias (brightness) parameters.
 
-### Saturation Adjustment (`saturation()`)
+#### Saturation Adjustment (`saturation()`)
 
 Image gets converted to HSV color space to adjust the saturation.
 
 ## Installation
 
 #### Clone the repository
+
 ``` git clone https://github.com/yourusername/halftone-color.git
 cd halftone-color ```
 
