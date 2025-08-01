@@ -32,11 +32,11 @@ The monochrome version was reimplemented during the 2025 summer course [Reproduc
 
 The halftone works with 3 core components: Hilbert Curve Generation, Curve Generation and the Halftoning Engine
 
-### 1. Space Filling Curve Generation (`hilbert()/peano()/lebesgue()`)
+#### 1. Space Filling Curve Generation (`hilbert()/peano()/lebesgue()`)
 
 Maps a 1D index to 2D coordinates on a specified space filling curve
 
-### 2. Curve Generation (generate_space_filling_curve()`)
+#### 2. Curve Generation (generate_space_filling_curve()`)
 
 Calculates minimum curve order to cover image dimensions, and then generates complete curve coordinates
 The space-filling curve approach provides:
