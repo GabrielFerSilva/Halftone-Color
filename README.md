@@ -4,7 +4,7 @@
 [![OpenCV](https://img.shields.io/badge/opencv-4.5+-brightgreen)](https://opencv.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-<img src="Images/pipeline.png" alt="Pipeline of the color mode halftone" width="800">
+<img src="Images/halftone_color.png" alt="Pipeline of the color mode halftone" width="800">
 
 An implementation of color halftoning using space-filling curves, extending the original monochrome algorithm from the SIGGRAPH '91 paper.
 
@@ -26,7 +26,7 @@ This project implements a color version of the halftoning algorithm described in
 *Luiz Velho and Jonas de Miranda Gomes*  
 SIGGRAPH '91 ([DOI: 10.1145/122718.122727](https://doi.org/10.1145/122718.122727))
 
-The monochrome version was reimplemented during the 2025 summer course [Reproducing Results in Computer Graphics](https://lhf.impa.br/cursos/rr/)by me, Bianca Zavadisk de Abreu, Gustavo Souza Cardoso, Igor Augusto Zwirtes, Igor Roberto Alves, João Marcelo, Lucas Barros Barcelos, Pedro Henrique Porto and Yan Hill at the Instituto de Mathematica Pura e Aplicada (IMPA). This extension adds RGB image support to the original monochrome implementation. The monochrome version was reimplemented. We used Python because it had compatibility with OpenCV and because it was the most known programming language by the group.
+The monochrome version was reimplemented during the 2025 summer course [Reproducing Results in Computer Graphics](https://lhf.impa.br/cursos/rr/)by me, Bianca Zavadisk de Abreu, Gustavo Souza Cardoso, Igor Augusto Zwirtes, Igor Roberto Alves, João Marcelo, Lucas Barros Barcelos, Pedro Henrique Porto and Yan Hill at the Instituto de Mathematica Pura e Aplicada (IMPA). This extension was made by me and adds a RGB image support to the original monochrome implementation. The monochrome version was reimplemented. We used Python because it had compatibility with OpenCV and because it was the most known programming language by the group.
 
 ## Algorithm
 
@@ -34,7 +34,7 @@ The halftone works with 3 core components: Hilbert Curve Generation, Curve Gener
 
 #### 1. Space Filling Curve Generation (`hilbert()/peano()/lebesgue()`)
 
-Maps a 1D index to 2D coordinates on a specified space filling curve
+Maps a 1D index to 2D coordinates on the specified space filling curve
 
 #### 2. Curve Generation (generate_space_filling_curve()`)
 
@@ -44,7 +44,7 @@ The space-filling curve approach provides:
 - Better detail preservation
 - Smother tonal transitions
 
-### 3. Halftoning Engine (`halftoning()`)
+#### 3. Halftoning Engine (`halftoning()`)
 
 The color halftone implementation:
 1. Decomposes the RGB image into three separated channels, one for each color.
