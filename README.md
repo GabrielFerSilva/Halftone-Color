@@ -85,7 +85,7 @@ Image gets converted to HSV color space to adjust the saturation.
 ```bash
 git clone https://github.com/yourusername/halftone-color.git
 scd halftone-color
-```bash
+bash```
 
 ### Setup
 bash
