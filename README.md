@@ -82,10 +82,10 @@ Image gets converted to HSV color space to adjust the saturation.
 
 #### Clone the repository
 
-```bash
+```python
 git clone https://github.com/yourusername/halftone-color.git
 scd halftone-color
-bash```
+```
 
 ### Setup
 bash
