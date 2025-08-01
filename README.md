@@ -4,7 +4,7 @@
 [![OpenCV](https://img.shields.io/badge/opencv-4.5+-brightgreen)](https://opencv.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-<img src="images/pipeline.png" alt="Pipeline of the color mode halftone" width="800">
+<img src="Images/pipeline.png" alt="Pipeline of the color mode halftone" width="800">
 
 An implementation of color halftoning using space-filling curves, extending the original monochrome algorithm from the SIGGRAPH '91 paper.
 
