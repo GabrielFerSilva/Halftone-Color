@@ -21,6 +21,7 @@ An implementation of color halftoning using space-filling curves, extending the 
 ## About
 
 This project implements a color version of the halftoning algorithm described in:
+
 **"Digital halftoning with space filling curves"**  
 *Luiz Velho and Jonas de Miranda Gomes*  
 SIGGRAPH '91 ([DOI: 10.1145/122718.122727](https://doi.org/10.1145/122718.122727))
