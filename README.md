@@ -58,18 +58,34 @@ The color halftone implementation:
 
 ## Effects
 
-### Brightness Adjustment
+### Brightness/Contrast Adjustment (`brightnesscontrast()`)
 
 Adjusts image brightness using a linear transformation formula:
 
-$g(x) = \alpha f(x) + \beta$
+$g(x) = \alpha \dot f(x) + \beta$
 
-Where $\alpha > 0$, $\beta$ is the gain(contrast) and bias(brightness) parameters.
+Where $\alpha > 0$, $\beta$ is the gain (contrast) and bias (brightness) parameters.
+
+### Saturation Adjustment (`saturation()`)
+
+Image gets converted to HSV color space to adjust the saturation.
 
 ## Installation
+
+# Clone the repository
+```git clone https://github.com/yourusername/halftone-color.git
+cd halftone-color```
+
 
 ### Setup
 ```bash
 git clone https://github.com/yourusername/halftone-color.git
 cd halftone-color
 pip install -r requirements.txt
+
+## References
+
+This implementation follows OpenCV's basic linear transformation approach. For official documentation:
+
+[OpenCV Basic Linear Transform Tutorial](https://docs.opencv.org/4.x/d3/dc1/tutorial_basic_linear_transform.html)  
+*OpenCV 4.13.0 Documentation*
