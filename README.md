@@ -72,13 +72,13 @@ Image gets converted to HSV color space to adjust the saturation.
 
 ## Installation
 
-# Clone the repository
-```git clone https://github.com/yourusername/halftone-color.git
-cd halftone-color```
+#### Clone the repository
+``` git clone https://github.com/yourusername/halftone-color.git
+cd halftone-color ```
 
 
 ### Setup
-```bash
+bash
 git clone https://github.com/yourusername/halftone-color.git
 cd halftone-color
 pip install -r requirements.txt
