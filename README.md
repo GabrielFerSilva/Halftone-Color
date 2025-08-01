@@ -78,13 +78,13 @@ Image gets converted to HSV color space to adjust the saturation.
 
 ### 1. 
 
-<img src="Images/barquinho" alt="Sailboat on lake , found in USC-SIPI database" width="800">
+<img src="Images/barquinho.tiff" alt="Sailboat on lake , found in USC-SIPI database" width="800">
 
-<img src="Images/hilbert/collage_hilbert_2" alt="Sailboat on lake , found in USC-SIPI database" width="800">
+<img src="Images/hilbert/collage_hilbert_2.png" alt="Sailboat on lake , found in USC-SIPI database" width="800">
 
-<img src="Images/hilbert/collage_hilbert_6" width="1600">
+<img src="Images/hilbert/collage_hilbert_6.png" width="1600">
 
-<img src="Images/hilbert/collage_hilbert_10" width="1600">
+<img src="Images/hilbert/collage_hilbert_10.png" width="1600">
 
 ## Installation
 
