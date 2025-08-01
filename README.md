@@ -40,7 +40,7 @@ The halftone works with 3 core components: Hilbert Curve Generation, Curve Gener
 
 Maps a 1D index to 2D coordinates on the specified space filling curve(SFC), this is used to transverse the pixels of the image and to conceive the halftoning.
 
-#### 2. Curve Generation (generate_space_filling_curve()`)
+#### 2. Curve Generation (`generate_space_filling_curve()`)
 
 Calculates minimum curve order to cover image dimensions, and then generates complete curve coordinates
 The space-filling curve approach provides:
