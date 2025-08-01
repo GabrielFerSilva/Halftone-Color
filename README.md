@@ -62,9 +62,9 @@ The color halftone implementation:
 
 Adjusts image brightness using a linear transformation formula:
 
-$ g(x) = \alpha f(x) + \beta $
+$g(x) = \alpha f(x) + \beta$
 
-Where $\alpha > 0$, $\Beta$ is the gain(contrast) and bias(brightness) parameters.
+Where $\alpha > 0$, $\beta$ is the gain(contrast) and bias(brightness) parameters.
 
 ## Installation
 
