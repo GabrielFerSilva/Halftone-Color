@@ -191,7 +191,7 @@ Image gets converted to HSV color space to adjust the saturation.
 
 ### 3. Contrast
 
-<img src="Images/masqueico.tiff" alt="Photo of a Baboon , found in USC-SIPI database" width="400">
+<img src="Images/baboon.tiff" alt="Photo of a Baboon , found in USC-SIPI database" width="400">
 
 <img src="Images/cont1.png" width="1600">
 
@@ -211,11 +211,23 @@ Image gets converted to HSV color space to adjust the saturation.
 
 ## Installation
 
-#### Clone the repository
+#### 1. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/halftone-color.git
 scd halftone-color
+```
+
+#### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+#### 3. Verify Installation
+
+```bash
+python -c "import cv2, numpy; print(f'OpenCV:{cv2.__version__}, NumPy:{numpy.__version__}')"
 ```
 
 ## References
