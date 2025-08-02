@@ -328,7 +328,7 @@ if __name__ == "__main__":
 
     # Set halftoning parameters
     curve_type = "hilbert"  # Try "peano" or "lebesgue" as well
-    cluster_size = 10
+    cluster_size = 8
     distribution = "ordered"  # Options: "standard", "ordered", "random"
     
     # Process the image
